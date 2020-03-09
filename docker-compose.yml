@@ -6,7 +6,7 @@ services:
       dockerfile: .docker/Dockerfile
     image: playground
     ports:
-      - 3001:80
+      - 4000:80
     volumes:
       - .:/srv/web
       - .docker/php.ini:/usr/local/etc/php/conf.d/php.ini
@@ -40,7 +40,7 @@ services:
     links:
       - mysql
     ports:
-      - 3002:80
+      - 4001:80
     environment:
       PMA_HOST: mysql
       MYSQL_USER: root
